@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // All CSS for this button component
 const getStatrtedStyles = {
@@ -11,19 +11,20 @@ const getStatrtedStyles = {
   color: "#FEFDFF",
   borderRadius: "1.5rem",
   border: "none",
-  boxShadow: "1.25rem 1.25rem 1.25rem -0.625rem #2B2D2B40 inset, 0.125rem 0.125rem 0.125rem rgba(236, 237, 236, 0.1) inset",
+  boxShadow:
+    "1.25rem 1.25rem 1.25rem -0.625rem #2B2D2B40 inset, 0.125rem 0.125rem 0.125rem rgba(236, 237, 236, 0.1) inset",
   // box-shadow: y axis x axis blur spread color | inset puts the shadow inside the item's border
-}
+};
 
 function GetStarted() {
   return (
     <React.Fragment>
       <button style={getStatrtedStyles}>Get Started</button>
     </React.Fragment>
-  )
+  );
 }
 
-export default GetStarted
+export default GetStarted;
 
 // /* Quiz Button in progress */
 
@@ -48,7 +49,6 @@ export default GetStarted
 // order: 1;
 // flex-grow: 0;
 
-
 // /* Get Started */
 
 // width: 113px;
@@ -63,7 +63,6 @@ export default GetStarted
 // text-transform: capitalize;
 
 // color: #FEFDFF;
-
 
 // /* Inside auto layout */
 // flex: none;
