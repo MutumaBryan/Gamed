@@ -13,7 +13,6 @@ const getStatrtedStyles = {
   border: "none",
   boxShadow: "1.25rem 1.25rem 1.25rem -0.625rem #2B2D2B40 inset, 0.125rem 0.125rem 0.125rem rgba(236, 237, 236, 0.1) inset",
   // box-shadow: y axis x axis blur spread color | inset puts the shadow inside the item's border
-  height: "4rem",
 }
 
 function GetStarted() {
