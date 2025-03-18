@@ -1,0 +1,89 @@
+import React from "react";
+import GetStarted from "../Button/GetStarted";
+import BadgeLevel4 from "../../assets/images/BadgeLevel4.svg";
+// Section is the overall card
+// Article is the written content
+// GetStarted is the button Component
+
+const sectionEarnCardStyles = {
+  backgroundColor: "#BEAADD",
+  height: "27.5rem",
+  width: "37.5rem",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "0.75rem",
+  borderRadius: "2.5rem",
+  // box-shadow: y axis x axis blur spread color | inset puts the shadow inside the item's border
+  boxShadow:
+    "3.261rem 3.261rem 6.523rem -1.631rem #00000040 inset, 2.446rem 2.446rem 5.707rem -1.631rem #00000040 inset, 2.446rem 2.446rem 6.523rem -1.631rem #00000040 inset, 1.631rem 1.631rem 3.261rem -3.261rem #35363540, 1.631rem 1.631rem 3.261rem -3.261rem #35363540",
+};
+
+const divEarnCardContentStyles = {
+  height: "22.938rem",
+  width: "28.25rem",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-evenly",
+  alignItems: "center",
+  gap: "2rem",
+};
+
+const imageBadgeLevel4Styles = {
+  width: "8.75rem",
+  height: "8.75rem",
+};
+
+const articleEarnCardStyles = {
+  width: "28.25rem",
+  height: "7.188rem",
+  textAlign: "center",
+};
+
+const headerEarnCardStyles = {
+  fontFamily: "Rakkas",
+  fontWeight: "400",
+  fontSize: "2rem",
+  lineHeight: "2.929rem",
+  height: "2.938rem",
+  width: "100%"
+};
+
+const paragraphEarnCardStyles = {
+  fontFamily: "Raleway",
+  fontWeight: "400",
+  fontSize: "1.25rem",
+  lineHeight: "1.875rem",
+  color: "#323132",
+  margin: "0",
+  height: "3.75rem",
+  width: "100%"
+};
+function EarnCard() {
+  return (
+    <React.Fragment>
+      <section id="earn-card-main" style={sectionEarnCardStyles}>
+        <div id="earn-card-content" style={divEarnCardContentStyles}>
+          <img
+            src={ BadgeLevel4 }
+            alt="This is a badge for level 4"
+            style={imageBadgeLevel4Styles}
+          ></img>
+          <article id="earn-card-title" style={articleEarnCardStyles}>
+            <header style={headerEarnCardStyles}>
+              EARN BADGES AS YOU LEARN
+            </header>
+            <p style={paragraphEarnCardStyles}>
+              Complete lessons, unlock badges and celebrate your progress. Are
+              you ready to start earning?
+            </p>
+          </article>
+          <GetStarted />
+        </div>
+      </section>
+    </React.Fragment>
+  );
+}
+
+export default EarnCard;
