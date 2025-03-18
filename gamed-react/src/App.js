@@ -1,10 +1,9 @@
 import './App.css';
+import GetStarted from './Component/Button/GetStarted';
 
 function App() {
   return (
-    <div className="App">
-      <p className='App'>Hello GamEd</p>
-    </div>
+    <GetStarted />
   );
 }
 
