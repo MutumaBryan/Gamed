@@ -1,10 +1,10 @@
 import './App.css';
+import GetStarted from './Component/Button/GetStarted';
+import EarnCard from './Component/Card/EarnCard';
 
 function App() {
   return (
-    <div className="App">
-      <p className='App'>Hello GamEd</p>
-    </div>
+    <EarnCard />
   );
 }
 
