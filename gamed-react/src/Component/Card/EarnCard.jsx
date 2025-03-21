@@ -7,14 +7,15 @@ import BadgeLevel4 from "../../assets/images/BadgeLevel4.svg";
 
 const sectionEarnCardStyles = {
   backgroundColor: "#BEAADD",
-  height: "68.643vh",
-  width: "43.924vw",
+  margin: "1rem",
+  height: "68vh",
+  width: "44vw",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "2.5rem",
-  // box-shadow: y axis x axis blur spread color | inset puts the shadow inside the item's border
+  // box-shadow: y axis x axis blur spread color | inset puts the shadow inside the item's border | After each comma is a new layer of box-shadow
   boxShadow:
     "3.261rem 3.261rem 6.523rem -1.631rem #00000040 inset, 2.446rem 2.446rem 5.707rem -1.631rem #00000040 inset, 2.446rem 2.446rem 6.523rem -1.631rem #00000040 inset, 1.631rem 1.631rem 3.261rem -3.261rem #35363540, 1.631rem 1.631rem 3.261rem -3.261rem #35363540",
   minWidth: "300px",

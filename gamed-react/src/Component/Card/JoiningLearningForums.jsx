@@ -1,9 +1,9 @@
 import React from "react";
 import GetStarted from "../Button/GetStarted";
-import BadgeLevel3 from "../../assets/images/BadgeLevel3.svg";
+import BadgeLevel5 from "../../assets/images/BadgeLevel5.svg";
 
 const mainCardStyles = {
-  backgroundColor: "#61D484",
+  backgroundColor: "#3C0099",
   margin: "1rem",
   height: "68vh",
   width: "44vw",
@@ -57,12 +57,12 @@ const cardParagraphStyles = {
   width: "100%",
 };
 
-function TopLeaderBoardCard() {
+function JoiningLearningForums() {
   return (
     <section style={mainCardStyles}>
       <div style={cardContentStyles}>
         <img
-          src={BadgeLevel3}
+          src={BadgeLevel5}
           alt="This is the badge level 3"
           style={cardImageStyles}
         ></img>
@@ -79,4 +79,6 @@ function TopLeaderBoardCard() {
   );
 }
 
-export default TopLeaderBoardCard;
+
+export default JoiningLearningForums
+

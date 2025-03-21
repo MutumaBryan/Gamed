@@ -1,10 +1,12 @@
-import './App.css';
-import GetStarted from './Component/Button/GetStarted';
-import EarnCard from './Component/Card/EarnCard';
+import "./App.css";
+import React from "react";
+import PasswordInput from "./Component/Input/PasswordInput";
 
 function App() {
   return (
-    <EarnCard />
+    <React.Fragment>
+    <PasswordInput></PasswordInput>
+    </React.Fragment>
   );
 }
 
