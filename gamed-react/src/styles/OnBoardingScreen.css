@@ -1,0 +1,100 @@
+
+.onboarding-page-wrapper {
+  display: grid;
+  grid-template-rows:1fr;
+  grid-template-column: 1fr 2fr;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#left-section {
+  /* Purple half of the page */
+  background-color: #3C0099;
+  grid-column: 1/span 1;
+  grid-row:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#right-section {
+  /* White half of the page */
+  grid-column:2;
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.text-wrapper {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  gap: 24px;
+  max-width: 599px;
+  max-height: 128px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.onboarding-card-wrapper {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#onboarding-article-header {
+  /* Welcome */
+
+  margin: 0 auto;
+  max-width: 599px;
+  max-height: 74px;
+
+  /* Gamed H1/Semibold */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.8125rem;
+  line-height: 4.6rem;
+  /* identical to box height, or 120% */
+  text-align: center;
+
+  /* Adding background image */
+  color: transparent; /* Make the text color transparent */
+  background-image: url('../assets/images/WelcomeImage.jpeg'); /* Path to your image */
+  background-size: cover; /* Adjust as needed: contain, repeat, etc. */
+  background-position: center; /* Adjust as needed */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text; /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* For older WebKit versions */
+}
+
+#onboarding-article-text {
+  /* Your learning adventure is just about to take off! */
+
+  margin: 0 auto;
+  max-width: 599px;
+  max-height: 30px;
+
+  /* Gamed H5/reg */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.875rem;
+  /* identical to box height, or 120% */
+  text-align: center;
+
+  /* Primary black */
+  color: #323132;
+}
+
+#onboarding-logo {
+  margin-top: 90px;
+}

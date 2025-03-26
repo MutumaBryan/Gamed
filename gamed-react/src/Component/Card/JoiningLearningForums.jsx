@@ -1,6 +1,7 @@
 import React from "react";
 import GetStarted from "../Button/GetStarted";
 import BadgeLevel5 from "../../assets/images/BadgeLevel5.svg";
+import { ThemeProvider } from "../../contexts/ButtonTheme";
 
 const mainCardStyles = {
   backgroundColor: "#3C0099",
@@ -18,7 +19,7 @@ const mainCardStyles = {
   minWidth: "300px",
   maxWidth: "600px",
   minHeight: "300px",
-  maxHeight: "440px",
+  maxHeight: "400px",
 };
 
 const cardContentStyles = {
@@ -28,7 +29,7 @@ const cardContentStyles = {
   flexDirection: "column",
   justifyContent: "space-evenly",
   alignItems: "center",
-  gap: "2%",
+  gap: "15px",
 };
 
 const cardImageStyles = {
@@ -42,18 +43,18 @@ const cardArticleStyles = {
 const cardHeaderStyles = {
   fontFamily: "Rakkas",
   fontWeight: "400",
-  fontSize: "2rem",
-  lineHeight: "2.929rem",
+  fontSize: "1.5rem",
+  lineHeight: "2rem",
   width: "100%",
+  color: "#FEFDFF",
 };
 
 const cardParagraphStyles = {
   fontFamily: "Raleway",
   fontWeight: "400",
-  fontSize: "1.25rem",
-  lineHeight: "1.875rem",
-  color: "#323132",
-  margin: "0",
+  fontSize: "1rem",
+  lineHeight: "1.5rem",
+  color: "#FEFDFF",
   width: "100%",
 };
 
@@ -67,18 +68,16 @@ function JoiningLearningForums() {
           style={cardImageStyles}
         ></img>
         <article style={cardArticleStyles}>
-          <header style={cardHeaderStyles}>TOP THE LEADER BOARD</header>
+          <header style={cardHeaderStyles}>JOIN LEARNING FORUMS</header>
           <p style={cardParagraphStyles}>
-            Earn points, rise to the top, and show everyone who’s the best. Can
-            you claim the crown?
+            Connect, share, and grow together! Join forums to discuss, ask
+            questions, and learn from peers.
           </p>
         </article>
-        <GetStarted />
+        <ThemeProvider><GetStarted variant="primary" /></ThemeProvider>
       </div>
     </section>
   );
 }
 
-
-export default JoiningLearningForums
-
+export default JoiningLearningForums;

@@ -1,14 +1,12 @@
 import "./App.css";
 import React from "react";
-import GamEd from "./Component/Card/GamEd";
-import UsernameInput from "./Component/Input/UsernameInput";
+import OnBoardingScreen from "./pages/OnBoardingScreen";
+
 
 function App() {
   return (
     <React.Fragment>
-    <UsernameInput/>
-    <GamEd></GamEd>
-    {/* <PasswordInput></PasswordInput> */}
+    <OnBoardingScreen/>
     </React.Fragment>
   );
 }
