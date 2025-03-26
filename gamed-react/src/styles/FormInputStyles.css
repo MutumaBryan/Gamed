@@ -1,11 +1,10 @@
 input {
   padding: 8px 16px;
-  margin: 0.5rem;
-
+  margin: 1.5rem 0.5rem;
   max-width: 608px;
   max-height: 56px;
-  min-width: 235px;
-  min-height: 30px;
+  min-width: 270px;
+  min-height: 35px;
   width: 38%;
 
   /* White color */
@@ -13,7 +12,6 @@ input {
   /* Grey/601 */
   border: 0.5px solid #bec2bf;
   border-radius: 16px;
-  bottom: 0px;
 }
 
 input::placeholder {
@@ -30,26 +28,36 @@ input:focus {
   outline: none;
 }
 
-label {
+.floating-label {
   font-family: "Raleway";
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.2rem;
   margin-left: .5rem;
   background-color: white;
-  transition: 0.3s ease all; /* creates a smooth animation effect when a CSS property changes */
+  position: absolute;
+  top: 0px;
+  pointer-events: none;
+  transition: 0.3s ease all;
 }
 
 .input-container {
-  display:flex;
-  flex-direction: column;
+  position: relative;
+  min-height: 60px;
 }
 
-#username:is(:focus) ~ label {
-  transform:
-   translateY(-120px)
-   scale(0.7);
-   /* Move label inside the border on focus or if input has value */
-  
-} 
+/* Style the label when the input is focused */
+.floating-label.focused {
+  top: 1rem;
+  margin-left: 2.5rem;
+  font-size: 0.75rem;
+  padding: 0 5.4px;
+  border-radius: 2px;
+  background-color: #ECEDEC;
+}
+
+/* Optional: Style the input container when focused */
+.input-container.focused input {
+  border-color: #1FC625;
+}
 

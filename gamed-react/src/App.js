@@ -1,11 +1,12 @@
 import "./App.css";
 import React from "react";
-import PasswordInput from "./Component/Input/PasswordInput";
 import GamEd from "./Component/Card/GamEd";
+import UsernameInput from "./Component/Input/UsernameInput";
 
 function App() {
   return (
     <React.Fragment>
+    <UsernameInput/>
     <GamEd></GamEd>
     {/* <PasswordInput></PasswordInput> */}
     </React.Fragment>
