@@ -1,6 +1,7 @@
 import React from "react";
 import GetStarted from "../Button/GetStarted";
 import BadgeLevel4 from "../../assets/images/BadgeLevel4.svg";
+import { ThemeProvider } from "../../contexts/ButtonTheme";
 // Section is the overall card
 // Article is the written content
 // GetStarted is the button Component
@@ -21,7 +22,7 @@ const sectionEarnCardStyles = {
   minWidth: "300px",
   maxWidth: "600px",
   minHeight: "300px",
-  maxHeight: "440px",
+  maxHeight: "400px",
 };
 
 const divEarnCardContentStyles = {
@@ -31,7 +32,7 @@ const divEarnCardContentStyles = {
   flexDirection: "column",
   justifyContent: "space-evenly",
   alignItems: "center",
-  gap: "2%",
+  gap: "15px",
 };
 
 const imageBadgeLevel4Styles = {
@@ -45,19 +46,18 @@ const articleEarnCardStyles = {
 const headerEarnCardStyles = {
   fontFamily: "Rakkas",
   fontWeight: "400",
-  fontSize: "2rem",
-  lineHeight: "2.929rem",
-  width: "100%"
+  fontSize: "1.5rem",
+  lineHeight: "2rem",
+  width: "100%",
 };
 
 const paragraphEarnCardStyles = {
   fontFamily: "Raleway",
   fontWeight: "400",
-  fontSize: "1.25rem",
-  lineHeight: "1.875rem",
+  fontSize: "1rem",
+  lineHeight: "1.5rem",
   color: "#323132",
-  margin: "0",
-  width: "100%"
+  width: "100%",
 };
 function EarnCard() {
   return (
@@ -65,7 +65,7 @@ function EarnCard() {
       <section id="earn-card-main" style={sectionEarnCardStyles}>
         <div id="earn-card-content" style={divEarnCardContentStyles}>
           <img
-            src={ BadgeLevel4 }
+            src={BadgeLevel4}
             alt="This is a badge for level 4"
             style={imageBadgeLevel4Styles}
           ></img>
@@ -78,7 +78,7 @@ function EarnCard() {
               you ready to start earning?
             </p>
           </article>
-          <GetStarted />
+          <ThemeProvider><GetStarted variant="primary" /></ThemeProvider>
         </div>
       </section>
     </React.Fragment>
