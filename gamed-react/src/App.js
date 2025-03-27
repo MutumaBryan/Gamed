@@ -1,12 +1,13 @@
 import "./App.css";
 import React from "react";
-import OnBoardingScreen from "./pages/OnBoardingScreen";
+import CreateAccount from "./pages/CreateAccount";
+
 
 
 function App() {
   return (
     <React.Fragment>
-    <OnBoardingScreen/>
+     <CreateAccount />
     </React.Fragment>
   );
 }

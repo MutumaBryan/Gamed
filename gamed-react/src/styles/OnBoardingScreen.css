@@ -1,4 +1,5 @@
 .onboarding-page-wrapper {
+  /* set to fill screen */
   display: grid;
   grid-template-rows: 1fr;
   position: fixed;
