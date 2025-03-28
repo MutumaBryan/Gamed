@@ -85,3 +85,8 @@
   padding: 0 3px;
   border-radius: 50%;
 }
+
+/* For laptop screens (less than 1440px) */
+@media only screen and (max-width: 1440px;) {
+  
+}
