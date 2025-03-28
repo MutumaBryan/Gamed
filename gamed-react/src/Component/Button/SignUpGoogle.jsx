@@ -46,7 +46,7 @@ const googleIconStyles = {
 function SignUpGoogle() {
   return (
     <React.Fragment>
-      <button style={buttonStyles}>
+      <button style={buttonStyles} id="google-redirect-button">
         Sign up with google
         <span>
           <img

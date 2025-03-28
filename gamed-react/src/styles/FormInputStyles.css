@@ -63,12 +63,12 @@ input:focus {
   border-color: #1FC625;
 }
 
-.flex-floating-label label {
+/* .flex-floating-label label {
   transform: translateX(calc(10%)); /* Center label over the top border */
-  background-color: white;
+  /* background-color: white;
   padding: 0 5px;
   margin-bottom: 0;
-}
+} */ 
 
 
 

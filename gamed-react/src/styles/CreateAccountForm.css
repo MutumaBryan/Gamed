@@ -87,12 +87,75 @@
 }
 
 /* For laptop screens (less than 1440px) */
-@media only screen and (max-width: 1440px;) {
-  #create-account-fieldset legend {}
-  #create-account-form {}
-  #redirect-to-log-in {}
-  #redirect-to-log-in span {}
-  #create-acc-button-wrapper {}
-  #or-wrapper {}
-  #or-wrapper p {}
+@media only screen and (min-width: 1001px) and (max-width: 1440px) {
+  #create-account-fieldset legend {
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 3.5rem;
+    margin: 0 0 20px 0;
+  }
+
+  #create-account-form input {
+    padding: 4px 8px;
+    margin: 0.5rem;
+    max-width: 382px;
+    max-height: 50px;
+    min-width: 270px;
+    min-height: 35px;
+  }
+
+  #create-account-form input::placeholder {
+    /* input your... */
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding: 0.1rem;
+  }
+
+  #create-account-form label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  /* When you focus */
+  .flex-floating-label input:focus + label,
+  .flex-floating-label label.active {
+    transform: translateY(16px) translateX(30px);
+    font-size: 0.7rem !important;
+  }
+
+  #create-acc-button-wrapper button {
+    width: 90% !important;
+    margin: 0.6rem 0 0px 0.8rem !important;
+  }
+
+  #redirect-to-log-in {
+    font-weight: 500;
+    font-size: 0.82rem;
+    line-height: 0.9rem;
+    margin: 8px 0px 10px 0;
+  }
+  #redirect-to-log-in span {
+    font-weight: 500;
+    font-size: 0.82rem;
+    line-height: 0.9rem;
+  }
+
+  #or-wrapper {
+    width: 75%;
+  }
+  #or-wrapper p {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.875rem;
+  }
+
+  #create-account-form #google-redirect-button {
+    width: 95% !important;
+    padding: 1.5% 0 !important;
+  }
 }
