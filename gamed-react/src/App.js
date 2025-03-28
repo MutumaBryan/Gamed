@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import CreateAccount from "./pages/CreateAccount";
+import CreateAccount from "./Pages/CreateAccount";
 
 
 

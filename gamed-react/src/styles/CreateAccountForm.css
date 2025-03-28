@@ -68,7 +68,7 @@
 
 #or-wrapper p {
   /* Or */
-  /* Gamed H5/Semibold */
+  /* Gamed p/Semibold */
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
@@ -88,5 +88,11 @@
 
 /* For laptop screens (less than 1440px) */
 @media only screen and (max-width: 1440px;) {
-  
+  #create-account-fieldset legend {}
+  #create-account-form {}
+  #redirect-to-log-in {}
+  #redirect-to-log-in span {}
+  #create-acc-button-wrapper {}
+  #or-wrapper {}
+  #or-wrapper p {}
 }
