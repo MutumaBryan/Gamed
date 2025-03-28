@@ -5,7 +5,6 @@ input {
   max-height: 56px;
   min-width: 270px;
   min-height: 35px;
-  width: 38%;
 
   /* White color */
   background: #fefdff;
@@ -28,36 +27,48 @@ input:focus {
   outline: none;
 }
 
-.floating-label {
+.flex-floating-label label {
   font-family: "Raleway";
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.2rem;
   margin-left: .5rem;
   background-color: white;
-  position: absolute;
-  top: 0px;
   pointer-events: none;
-  transition: 0.3s ease all;
-}
-
-.input-container {
-  position: relative;
-  min-height: 60px;
-}
-
-/* Style the label when the input is focused */
-.floating-label.focused {
-  top: 1rem;
-  margin-left: 2.5rem;
-  font-size: 0.75rem;
+  transition: transform 0.2s ease-in-out, font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+  transform: translateY(0); /* Initial position */
+  order: -1;/* Place the label above the input initially */
+  width: fit-content;
   padding: 0 5.4px;
   border-radius: 2px;
-  background-color: #ECEDEC;
+  background-color: white;
+}
+
+.flex-floating-label {
+  display: flex;
+  flex-direction: column; /* Stack input and label */
+  min-height: 60px;
+  width: 100%;
+}
+
+/* When you focus */
+.flex-floating-label input:focus + label,
+.flex-floating-label label.active {
+  transform: translateY(35px) translateX(30px); 
+  font-size: 0.75rem;
 }
 
 /* Optional: Style the input container when focused */
-.input-container.focused input {
+.flex-floating-label input:focus {
   border-color: #1FC625;
 }
+
+.flex-floating-label label {
+  transform: translateX(calc(10%)); /* Center label over the top border */
+  background-color: white;
+  padding: 0 5px;
+  margin-bottom: 0;
+}
+
+
 

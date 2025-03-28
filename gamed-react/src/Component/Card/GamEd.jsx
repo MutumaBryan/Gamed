@@ -1,4 +1,5 @@
 import React from "react";
+import WhiteLogo from "../../assets/images/WhiteLogo.svg"
 
 const cardStyles = {
   width: "29%",
@@ -44,7 +45,7 @@ function GamEd() {
   return (
     <React.Fragment>
       <section style={cardStyles}>
-        <h1 style={headingStyles}>GamEd</h1>
+        <img src={WhiteLogo} alt="This is the Company's White Logo Version"></img>
         <p style={paragraphStyles}>Your learning adventure begins with us</p>
       </section>
     </React.Fragment>

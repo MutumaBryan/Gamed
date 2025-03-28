@@ -24,6 +24,7 @@ function RotatingSlideCards() {
   return (
     <div
       className="rotating-slide-cards-container"
+      id="rotating-slide-cards-container"
       style={{
         position: "relative",
         minWidth: "300px",
@@ -31,7 +32,7 @@ function RotatingSlideCards() {
         minHeight: "300px",
         maxHeight: "400px",
         top: "5%",
-        left: "-50%"
+        left: "-52%"
       }}
     >
       {cards.map((card, index) => (

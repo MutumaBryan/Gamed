@@ -7,7 +7,7 @@ const buttonStyles = {
   maxHeight: "56px",
   minWidth: "235px",
   minHeight: "45px",
-  width: "38%",
+  width: "100%",
 
   /* White color */
   backgroundColor: "#FEFDFF",
@@ -23,7 +23,7 @@ const buttonStyles = {
   justifyContent: "center",
   alignItems: "center",
   padding: "1.75% 0px",
-  margin: "1rem",
+  margin: ".5rem",
   gap: "12px",
 
   /* Text/Medium */
