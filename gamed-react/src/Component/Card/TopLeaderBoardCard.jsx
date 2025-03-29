@@ -1,6 +1,7 @@
 import React from "react";
 import GetStarted from "../Button/GetStarted";
 import BadgeLevel3 from "../../assets/images/BadgeLevel3.svg";
+import { ThemeProvider } from "../../contexts/ButtonTheme";
 
 const mainCardStyles = {
   backgroundColor: "#61D484",
@@ -18,7 +19,7 @@ const mainCardStyles = {
   minWidth: "300px",
   maxWidth: "600px",
   minHeight: "300px",
-  maxHeight: "440px",
+  maxHeight: "400px",
 };
 
 const cardContentStyles = {
@@ -28,7 +29,7 @@ const cardContentStyles = {
   flexDirection: "column",
   justifyContent: "space-evenly",
   alignItems: "center",
-  gap: "2%",
+  gap: "15px",
 };
 
 const cardImageStyles = {
@@ -42,18 +43,17 @@ const cardArticleStyles = {
 const cardHeaderStyles = {
   fontFamily: "Rakkas",
   fontWeight: "400",
-  fontSize: "2rem",
-  lineHeight: "2.929rem",
+  fontSize: "1.5rem",
+  lineHeight: "2rem",
   width: "100%",
 };
 
 const cardParagraphStyles = {
   fontFamily: "Raleway",
   fontWeight: "400",
-  fontSize: "1.25rem",
-  lineHeight: "1.875rem",
+  fontSize: "1rem",
+  lineHeight: "1.5rem",
   color: "#323132",
-  margin: "0",
   width: "100%",
 };
 
@@ -73,7 +73,7 @@ function TopLeaderBoardCard() {
             you claim the crown?
           </p>
         </article>
-        <GetStarted />
+        <ThemeProvider><GetStarted variant="secondary" /></ThemeProvider>
       </div>
     </section>
   );

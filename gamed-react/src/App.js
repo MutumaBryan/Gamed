@@ -1,17 +1,13 @@
 import "./App.css";
 import React from "react";
-import LoginPage from "./Pages/LoginPage";
-import ForgotPassword from "./Pages/ForgotPassword";
-import PasscodeVerification from "./Pages/PasscodeVerification";
 import PasswordInput from "./Component/Input/PasswordInput";
+import CreateAccount from "./Pages/CreateAccount";
 
 function App() {
   return (
     <React.Fragment>
-    {/* <LoginPage></LoginPage> */}
-    {/* <PasswordInput></PasswordInput> */}
-    <ForgotPassword></ForgotPassword>
-    <PasscodeVerification></PasscodeVerification>
+    <PasswordInput></PasswordInput>
+     <CreateAccount />
     </React.Fragment>
   );
 }
