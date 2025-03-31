@@ -53,12 +53,14 @@
 #create-acc-button-wrapper {
   width: 550px;
   max-width: 100%;
+  margin: 20px;
 }
 
 #or-wrapper {
   width: 80%;
   position: relative;
   height: 30px;
+  margin-bottom: ;
 }
 
 #or-wrapper hr {
@@ -88,11 +90,18 @@
 
 /* For laptop screens (less than 1440px) */
 @media only screen and (max-width: 1440px;) {
-  #create-account-fieldset legend {}
-  #create-account-form {}
-  #redirect-to-log-in {}
-  #redirect-to-log-in span {}
-  #create-acc-button-wrapper {}
-  #or-wrapper {}
-  #or-wrapper p {}
+  #create-account-fieldset legend {
+  }
+  #create-account-form {
+  }
+  #redirect-to-log-in {
+  }
+  #redirect-to-log-in span {
+  }
+  #create-acc-button-wrapper {
+  }
+  #or-wrapper {
+  }
+  #or-wrapper p {
+  }
 }

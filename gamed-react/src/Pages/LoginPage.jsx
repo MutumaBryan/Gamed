@@ -1,17 +1,24 @@
 import React from "react";
-import LogInForm from "../Component/Input/LogInForm";
-import SignUpGoogle from "../Component/Button/SignUpGoogle";
-import 
+import GamEd from "../Component/Card/GamEd";
+import LogInForm from "../Layouts/LogInForm";
+import "../styles/CreateAccountPage.css";
 
 const LoginPage = () => {
-    return (
-    <div> 
-    <h2>Log In </h2>
-    <LogInForm/>
-    <p> or </p>
-    <SignUpGoogle/>
-    </div>
-    );
+  return (
+    <>
+      <div className="create-accountBody-wrapper">
+        <aside id="create-accountPage-aside">
+          <div id="create-accountPage-card-wrapper">
+            <GamEd />
+          </div>
+        </aside>
+
+        <main>
+          <LogInForm />
+        </main>
+      </div>
+    </>
+  );
 };
 
 export default LoginPage;
