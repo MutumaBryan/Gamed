@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "../../contexts/ButtonTheme";
+import { useTheme } from "../../Contexts/ButtonTheme";
 
 function GetStarted(variant) {
   const { theme } = useTheme();
