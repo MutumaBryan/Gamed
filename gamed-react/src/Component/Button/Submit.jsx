@@ -1,16 +1,16 @@
-import react from "react";
+import React from "react";
 import "../../styles/CheckoutButton.css";
 
-const LogIn = ({ onClick }) => {
+const Submit = () => {
   return (
     <div className="container">
       <div className="button-wrapper">
-        <button type="submit" onClick={onClick} className="checkout-button">
-          Log In
+        <button type="submit" className="checkout-button">
+          Submit
         </button>
       </div>
     </div>
   );
 };
 
-export default LogIn;
+export default Submit;

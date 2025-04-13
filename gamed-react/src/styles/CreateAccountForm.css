@@ -53,12 +53,14 @@
 #create-acc-button-wrapper {
   width: 550px;
   max-width: 100%;
+  margin: 20px;
 }
 
 #or-wrapper {
   width: 80%;
   position: relative;
   height: 30px;
+  margin-bottom: ;
 }
 
 #or-wrapper hr {
