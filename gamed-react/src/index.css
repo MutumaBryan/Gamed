@@ -1,4 +1,100 @@
 html {
   margin: 0;
-	padding: 0;
+  padding: 0;
+}
+.success_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.success_text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 39px;
+  margin-bottom: 64px;
+}
+.success_close {
+  position: absolute;
+  top: 112px;
+  right: 80px;
+  cursor: pointer;
+}
+
+.error_text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 39px;
+  margin-bottom: 24px;
+}
+.error_small_text {
+  font-family: "Raleway", sans-serif;
+  color: #323132;
+  font-size: 16px;
+  margin-bottom: 64px;
+}
+
+.passwordverification__card {
+  background: white;
+  padding: 6rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+.passwordverification__card * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.passwordverification__heading {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 37px;
+  margin-bottom: 22px;
+}
+.passwordverification__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 45px;
+}
+.passwordverification__formgroup {
+  margin-bottom: 24px;
+  width: 584px;
+}
+.passwordverification__label {
+  font-family: "Raleway", sans-serif;
+  color: #323132;
+  margin-bottom: 8px;
+  display: block;
+}
+.passwordverification__password {
+  border-radius: 16px;
+  padding: 20px 16px;
+  border: 1px solid #bec2bf;
+  font-size: 14px;
+  width: 100%;
+}
+.custom_button {
+  text-align: center;
+  padding: 14px;
+  width: 550px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #74ff9e;
+  background-color: #3c0099;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: block;
 }
