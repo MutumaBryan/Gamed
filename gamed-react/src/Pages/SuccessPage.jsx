@@ -8,7 +8,7 @@ function SuccessPage() {
       <img src={closeimg} alt="close" className="success_close" />
       <img src={successimg} alt="success" style={{ width: 279, height: 279 }} />
       <p className="success_text">Your password reset is successful</p>
-      <CustomButton text={"Log in"} />
+      {/* <CustomButton text={"Log in"} /> */}
     </main>
   );
 }

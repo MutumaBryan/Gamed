@@ -1,22 +1,18 @@
-import "./App.css";
 import React from "react";
-import PasswordInput from "./Component/Input/PasswordInput";
+import LandingPage from "./Pages/LandingPage";
+import LoginPage from "./Pages/LoginPage"
+import LevelUp from "./Component/Card/LevelUp";
 import CreateAccount from "./Pages/CreateAccount";
-import LoginPage from "./Pages/LoginPage";
-import SuccessPage from "./Pages/SuccessPage";
-import ErrorPage from "./Pages/ErrorPage";
-import PasscodeVerification from "./Pages/PasscodeVerification";
-import PasswordVerification from "./Pages/PasswordVerification";
+import ErrorPage from "./Pages/ErrorPage"
+import ForgotPassword from "./Pages/ForgotPassword"
+import PasswordVerification from "./Pages/PasswordVerification.jsx"
+import SuccessPage from "./Pages/SuccessPage.jsx"
+
 
 function App() {
   return (
     <React.Fragment>
-      {/* <PasswordInput></PasswordInput>
-      <CreateAccount />
-      <LoginPage /> */}
-      {/* <SuccessPage /> */}
-      <PasswordVerification />
-      {/* <ErrorPage /> */}
+      <ForgotPassword />
     </React.Fragment>
   );
 }

@@ -9,7 +9,7 @@ function ErrorPage() {
       <img src={errorimg} alt="success" style={{ width: 279, height: 279 }} />
       <p className="error_text">OOps, you have been blocked from logging in</p>
       <p className="error_small_text">Try again after 10 minutes</p>
-      <CustomButton text={"Log in"} />
+        <CustomButton text="Log in"/>
     </main>
   );
 }
