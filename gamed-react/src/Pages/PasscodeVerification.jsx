@@ -1,6 +1,6 @@
 import React from "react";
 import PasscodeVerificationForm from "../Layouts/PasscodeVerificationForm";
-import "../styles/ForgotPassword.css";
+import "../Styles/ForgotPassword.css";
 
 const PasscodeVerification = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../../styles/PasscodeInput.css";
+import "../../Styles/PasscodeInput.css";
 
 const PasscodeInput = ({ length = 5, onComplete }) => {
   const [values, setValues] = useState(new Array(length).fill(""));

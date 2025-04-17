@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PasscodeInput from "../Component/Input/PasscodeInput";
 import VerifyButton from "../Component/Button/VerifyButton";
 import ResendCode from "../Component/Button/ResendCode";
-import "../styles/ForgotPasswordForm.css";
+import "../Styles/ForgotPasswordForm.css";
 
 const PasscodeVerificationForm = () => {
   const [passcode, setPasscode] = useState("");
