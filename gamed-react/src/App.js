@@ -3,6 +3,8 @@ import React from "react";
 // import PasswordInput from "./Component/Input/PasswordInput";
 // import CreateAccount from "./Pages/CreateAccount";
 // import LoginPage from "./Pages/LoginPage";
+// import SocialLink from "./Layouts/SocialLink";
+import CoursesCarousel from "./Layouts/CoursesCarousel";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
     {/* <PasswordInput></PasswordInput> */}
      {/* <CreateAccount /> */}
      {/* <LoginPage/> */}
+     {/* <SocialLink/> */}
+     <CoursesCarousel/>
     </React.Fragment>
   );
 }
