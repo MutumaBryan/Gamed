@@ -1,7 +1,7 @@
 import React from "react";
 import GetStarted from "../Button/GetStarted";
 import BadgeLevel4 from "../../assets/images/BadgeLevel4.svg";
-import { ThemeProvider } from "../../contexts/ButtonTheme";
+import { ThemeProvider } from "../../Contexts/ButtonTheme";
 // Section is the overall card
 // Article is the written content
 // GetStarted is the button Component

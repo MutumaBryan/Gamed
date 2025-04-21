@@ -1,9 +1,9 @@
 import React from "react";
-import "../../styles/CheckoutButton.css";
+import "../../Styles/CheckoutButton.css";
 
 const Submit = () => {
   return (
-    <div className="container">
+    <div className="checkout-button-container">
       <div className="button-wrapper">
         <button type="submit" className="checkout-button">
           Submit

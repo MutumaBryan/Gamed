@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/CheckoutButton.css";
+import "../../Styles/CheckoutButton.css";
 
 const VerifyButton = ({ isDisabled, onVerify }) => {
   return (

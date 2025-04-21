@@ -3,7 +3,7 @@ import UsernameInput from "../Component/Input/UsernameInput";
 import PasswordInput from "../Component/Input/PasswordInput";
 import LogIn from "../Component/Button/LogIn";
 import SignUpGoogle from "../Component/Button/SignUpGoogle";
-import "../styles/CreateAccountForm.css";
+import "../Styles/CreateAccountForm.css";
 
 const LogInForm = () => {
   return (

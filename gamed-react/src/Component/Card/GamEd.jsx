@@ -21,10 +21,7 @@ const cardStyles = {
   borderRadius: "18.1646px",
 };
 
-const headingStyles ={
-  // GamEd
-  fontFamily: "Raleway", color: "#FEFDFF", fontWeight: "900"
-}
+
 const paragraphStyles = {
   /* Your learning adventure begins with us */
 
@@ -44,7 +41,7 @@ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 function GamEd() {
   return (
     <React.Fragment>
-      <section style={cardStyles}>
+      <section style={cardStyles} id="gamEd-createAcc-card">
         <img src={WhiteLogo} alt="This is the Company's White Logo Version"></img>
         <p style={paragraphStyles}>Your learning adventure begins with us</p>
       </section>

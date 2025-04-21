@@ -1,7 +1,7 @@
 import React from "react";
 import GetStarted from "../Button/GetStarted";
 import BadgeLevel5 from "../../assets/images/BadgeLevel5.svg";
-import { ThemeProvider } from "../../contexts/ButtonTheme";
+import { ThemeProvider } from "../../Contexts/ButtonTheme";
 
 const mainCardStyles = {
   backgroundColor: "#3C0099",

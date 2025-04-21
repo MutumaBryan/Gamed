@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import EmailInput from "../Component/Input/EmailInput";
 import Submit from "../Component/Button/Submit";
 // import GoBackIcon from "../../assets/images/Go_back_icon.svg";
-import "../styles/ForgotPasswordForm.css";
+import "../Styles/CreateAccountForm.css";
 
 const ForgotPasswordForm = () => {
   const [formData, setFormData] = useState({ email: "" });
@@ -19,14 +19,14 @@ const ForgotPasswordForm = () => {
 
   return (
     <>
-      <fieldset id="form-fieldset">
+      <fieldset id="forgotPassword-form-fieldset">
         <legend>Oops, you forgot your Password?</legend>
         <h2>Don't worry! You'll get it in a jiffy</h2>
         <form onSubmit={handleSubmit} id="password-layout-form">
           <div className="password-form-container">
             <EmailInput value={formData.email} onChange={handleChange} />
             <div id="submit-button-wrapper">
-              <Submit /> {/* Removed onClick since form handles submit */}
+              <Submit /> Removed onClick since form handles submit
               <div id="redirect-to-checkout">
                 {/* <img src={GoBackIcon} alt="Go Back"></img> */}
                 <a href="/login">Go back to Log In</a>
