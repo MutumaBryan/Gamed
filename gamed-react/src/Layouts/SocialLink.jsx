@@ -3,7 +3,8 @@ import googleIcon from "../assets/images/google.svg";
 import figmaIcon from "../assets/images/figma.svg";
 import youtubeIcon from "../assets/images/youtube.svg";
 import instagramIcon from "../assets/images/instagram.svg";
-import "../styles/SocialLink.css";
+// import "../Styles/SocialLink.css";
+import "../Styles/Socials.css";
 
 const socialLinks = [
   {
@@ -29,36 +30,37 @@ const socialLinks = [
     icon: instagramIcon,
     url: "https://www.instagram.com",
   },
-
-  {
-    name: "Google",
-    icon: googleIcon,
-    url: "https://www.google.com",
-  },
 ];
 
 const SocialLink = () => {
   return (
-    <div className="social-navbar">
-      <h2 className="social-heading">
-        Companies where our <span className="header-line">learners work</span>
+    <div id="social-navbar">
+      <h2 id="social-heading">
+        Companies where our <span id="header-line">learners work</span>
       </h2>
-      <div className="link-conatiner">
-        <nav className="social-links">
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={link.name}
-              className="social-link"
-            >
-              <img src={link.icon} alt={link.name} className="w-6 h-6" />
-              <span className="social-name">{link.name}</span>
-            </a>
-          ))}
-        </nav>
+      <div id="social-link-container">
+        <div id="social-links">
+          <div id="scroll-track">
+            {[
+              ...socialLinks,
+              ...socialLinks,
+              ...socialLinks,
+              ...socialLinks,
+            ].map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={link.name}
+                id="social-link"
+              >
+                <img src={link.icon} alt={link.name} id="social-icon" />
+                <span id="social-name">{link.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

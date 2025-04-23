@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/CourseCard.css";
+import "../Styles/CourseCard.css";
 
 const CardRating = () => {
   const stars = Array(5)
@@ -10,8 +10,11 @@ const CardRating = () => {
       </span>
     ));
   return (
-    <div className="rating">
-      <span className="rating-span" style={{ marginRight: "5px", fontWeight: "bold" }}> 5.0 </span>
+    <div id="rating">
+      <span id="rating-span" style={{ marginRight: "5px", fontWeight: "bold" }}>
+        {" "}
+        5.0{" "}
+      </span>
       {stars}
     </div>
   );

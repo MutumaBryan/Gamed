@@ -3,7 +3,6 @@ import "../Styles/LandingPage.css";
 import LandingTopSection from "../Layouts/LandingTopSection";
 import LandingSectionTwo from "../Layouts/LandingSectionTwo";
 
-
 function LandingPage() {
   return (
     <React.Fragment>

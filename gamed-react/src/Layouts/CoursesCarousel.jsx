@@ -1,40 +1,40 @@
 import React, { useState, useEffect } from "react";
 import SampleImage from "../assets/images/CardImage.svg";
 import CourseCard from "../Component/Card/CourseCard";
-import "../styles/CoursesCarousel.css";
+import "../Styles/CoursesCarousel.css";
 
 const cardData = [
   {
-    title: "Card one",
-    description: "Description for card one.",
+    title: "",
+    description: "",
     rating: 5,
     Image: SampleImage,
   },
 
   {
-    title: "Card two",
-    description: "Description for card two.",
+    title: "",
+    description: "",
     rating: 5,
     Image: SampleImage,
   },
 
   {
-    title: "Card three",
-    description: "Description for card three.",
+    title: "",
+    description: "",
     rating: 5,
     Image: SampleImage,
   },
 
   {
-    title: "Card four",
-    description: "Description for card four.",
+    title: "",
+    description: "",
     rating: 5,
     Image: SampleImage,
   },
 
   {
-    title: "Card five",
-    description: "Description for card five.",
+    title: "",
+    description: "",
     rating: 5,
     Image: SampleImage,
   },
@@ -62,34 +62,51 @@ const CoursesCarousel = () => {
   };
 
   const handleNext = () => {
-    if (currentIndex < data.length - cardsToShow) {
+    if (currentIndex < cardData.length - cardsToShow) {
       setCurrentIndex((prev) => prev + 1);
     }
   };
 
-  const visibleCards = data.slice(currentIndex, currentIndex + cardsToShow);
+  const visibleCards = cardData.slice(currentIndex, currentIndex + cardsToShow);
 
   return (
-    <div className="carousel-wrapper">
-      <button onClick={handlePrev} className="nav-btn">
-        ←
-      </button>
-
-      <div className="carousel-container">
-        {visibleCards.map((item, index) => (
-          <CourseCard
-            key={index}
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            rating={item.rating}
-          />
-        ))}
+    <div id="available-course">
+      <div>
+        <h2 id="available-courses-heading">
+          Available <span id="courses-underline">Courses</span>
+        </h2>
       </div>
+      <div>
+        <div id="carousel-wrapper">
+          <button
+            onClick={handlePrev}
+            id="prev-btn"
+            disabled={currentIndex === 0}
+          >
+            ←
+          </button>
 
-      <button onClick={handleNext} className="nav-btn">
-        →
-      </button>
+          <div id="carousel-container">
+            {visibleCards.map((item, index) => (
+              <CourseCard
+                key={index}
+                image={item.Image}
+                title={item.title}
+                description={item.description}
+                rating={item.rating}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={handleNext}
+            id="next-btn"
+            disabled={currentIndex >= cardData.length - cardsToShow}
+          >
+            →
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

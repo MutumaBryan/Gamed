@@ -33,6 +33,7 @@
 }
 
 .link-conatiner {
+  overflow: hidden;
   background: linear-gradient(
     to bottom,
     #7d55bb26 0%,
@@ -47,6 +48,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  animation: scroll 20s linear infinite;
+
   /* gap: 30px; */
 }
 

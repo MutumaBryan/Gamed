@@ -1,22 +1,23 @@
-.card-container {
+#card-container {
   background-color: #fefdff;
   border: 0.5px solid #bec2bf;
   border-radius: 10px;
   padding: 20px;
   width: 300px;
-  box-shadow: 0 4px 6px #352d40;
   /* text-align: center; */
   transition: transform 0.3s ease;
+  box-shadow: 10px 10px 20px -30px #3c0099;
 }
-s .card-container:hover {
+
+#card-container:hover {
   transform: translateY(20px);
 }
 
-.card-img {
+#card-img {
   max-width: 300px;
 }
 
-.title-div {
+#title-div {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -24,22 +25,22 @@ s .card-container:hover {
   cursor: pointer;
 }
 
-.card-title {
+#card-title {
   font-family: "Raleway";
   font-size: 20px;
   font-weight: 600px;
-  line-height: 20px;
+  line-height: 24px;
 }
 
-.title-p {
+#title-p {
   font-family: "Raleway";
   font-weight: 400px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 19px;
   color: #3c0099;
 }
 
-.card-description {
+#card-description {
   text-align: start;
   color: #323132;
   font-family: "Raleway";
@@ -50,12 +51,12 @@ s .card-container:hover {
   margin-top: 0;
 }
 
-.rating {
+#rating {
   display: flex;
   align-items: center;
 }
 
-.rating-span {
+#rating-span {
   font-family: "Raleway";
   margin-right: 5px;
   font-weight: 400px;
@@ -64,12 +65,12 @@ s .card-container:hover {
   color: #bec2bf;
 }
 
-.button-wrapper {
+#button-wrapper {
   max-width: 200px;
   margin-top: 30px;
 }
 
-.checkout-button {
+#checkout-button {
   text-align: center;
   padding: 10px;
   width: 100%;
@@ -87,7 +88,7 @@ s .card-container:hover {
   display: block;
 }
 
-.checkout-button:hover {
+#checkout-button:hover {
   background-color: #3c0099;
   color: #74ff9e;
 }
