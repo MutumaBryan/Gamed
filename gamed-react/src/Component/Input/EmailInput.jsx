@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/FormInputStyles.css";
+import "../../Styles/FormInputStyles.css";
 
 const EmailInput = () => {
   const [email, setEmail] = useState("");

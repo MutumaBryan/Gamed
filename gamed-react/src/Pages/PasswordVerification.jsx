@@ -27,7 +27,7 @@ function PasswordVerification() {
             placeholder="Re-enter password"
           />
         </div>
-        <CustomButton text={"Submit"} />
+        <CustomButton text="Submit"/>
       </div>
     </div>
   );

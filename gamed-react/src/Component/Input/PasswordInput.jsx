@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/FormInputStyles.css";
+import "../../Styles/FormInputStyles.css";
 
 function PasswordInput() {
   // We use the useState Hook to create a state variable isFocused that tracks whether the input is currently focused. It's initialized to false

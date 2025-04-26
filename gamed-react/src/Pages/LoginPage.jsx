@@ -1,7 +1,7 @@
 import React from "react";
 import GamEd from "../Component/Card/GamEd";
 import LogInForm from "../Layouts/LogInForm";
-import "../styles/CreateAccountPage.css";
+import "../Styles/CreateAccountPage.css";
 
 const LoginPage = () => {
   return (

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import EarnCard from "../Component/Card/EarnCard.jsx";
 import JoiningLearningForums from "../Component/Card/JoiningLearningForums.jsx";
 import TopLeaderBoardCard from "../Component/Card/TopLeaderBoardCard.jsx";
-import '../styles/RotatingSliderCardStyles.css'
+import '../Styles/RotatingSliderCardStyles.css'
 
 const cards = [
   { id: 1, component: EarnCard },

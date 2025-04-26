@@ -1,6 +1,6 @@
 import React from "react";
 import RotatingSlideCards from "../Layouts/RotatingSlideCards";
-import "../styles/OnBoardingScreen.css";
+import "../Styles/OnBoardingScreen.css";
 import whiteLogo from "../assets/images/WhiteLogo.svg";
 
 function OnBoardingScreen() {

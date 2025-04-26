@@ -1,5 +1,5 @@
-import react from "react";
-import "../../styles/CheckoutButton.css";
+import React from "react";
+import "./../../Styles/CheckoutButton.css";
 
 const LogIn = ({ onClick }) => {
   return (
