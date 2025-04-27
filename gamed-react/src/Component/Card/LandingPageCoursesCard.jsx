@@ -5,7 +5,7 @@ import LearnMore from "../Button/LearnMore";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
-const CourseCard = ({ image, title, description, rating }) => {
+const LandingPageCourses = ({ image, title, description, rating }) => {
   return (
     <div id="custom-container">
       <div id="card-container">
@@ -26,4 +26,4 @@ const CourseCard = ({ image, title, description, rating }) => {
   );
 };
 
-export default CourseCard;
+export default LandingPageCourses;
