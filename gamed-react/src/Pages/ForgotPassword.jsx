@@ -5,13 +5,16 @@ import "../Styles/ForgotPassword.css";
 const ForgotPassword = () => {
   return (
     <>
-      <div className="container">
-        <div className="card" id="forgotpassowrd-card-wrapper">
-          <ForgotPasswordForm />
+      <div id="forgotPassword-container">
+        <div id="forgotPassword-card">
+          <div id="forgotPassword-content">
+            <ForgotPasswordForm />
+          </div>
         </div>
       </div>
     </>
   );
 };
+// id="forgotpassowrd-card-wrapper"
 
 export default ForgotPassword;

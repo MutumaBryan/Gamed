@@ -3,7 +3,6 @@ import googleIcon from "../assets/images/google.svg";
 import figmaIcon from "../assets/images/figma.svg";
 import youtubeIcon from "../assets/images/youtube.svg";
 import instagramIcon from "../assets/images/instagram.svg";
-// import "../Styles/SocialLink.css";
 import "../Styles/Socials.css";
 
 const socialLinks = [

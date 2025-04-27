@@ -5,9 +5,11 @@ import "../Styles/ForgotPassword.css";
 const PasscodeVerification = () => {
   return (
     <>
-      <div className="container">
-        <div className="card">
-          <PasscodeVerificationForm />
+      <div id="forgotPassword-container">
+        <div id="forgotPassword-card">
+          <div id="forgotPassword-content">
+            <PasscodeVerificationForm />
+          </div>
         </div>
       </div>
     </>
