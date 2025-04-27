@@ -2,6 +2,9 @@ import React from "react";
 import "../Styles/LandingPage.css";
 import LandingTopSection from "../Layouts/LandingTopSection";
 import LandingSectionTwo from "../Layouts/LandingSectionTwo";
+import LandingFooter from "../Layouts/LandingFooter";
+import CoursesCarousel from "../Layouts/CoursesCarousel";
+import SocialLink from "../Layouts/SocialLink";
 
 function LandingPage() {
   return (
@@ -9,6 +12,9 @@ function LandingPage() {
       <div class="scroll-container">
         <LandingTopSection />
         <LandingSectionTwo />
+        <SocialLink />
+        <CoursesCarousel />
+        <LandingFooter />
       </div>
     </React.Fragment>
   );

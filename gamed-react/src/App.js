@@ -1,4 +1,8 @@
 import React from "react";
+import DashboardSideNav from "./Layouts/DashboardSideNav";
+import SocialLink from "./Layouts/SocialLink";
+import CoursesCarousel from "./Layouts/CoursesCarousel"
+import LandingFooter from "./Layouts/LandingFooter";
 // import LandingPage from "./Pages/LandingPage";
 // import CreateAccount from "./Pages/CreateAccount";
 // import LandingPage from "./Pages/LandingPage";
@@ -12,8 +16,9 @@ import React from "react";
 function App() {
   return (
     <React.Fragment>
-      <LandingPage/>
+      {/* <LandingPage/> */}
       {/* <CreateAccount/> */}
+      <DashboardSideNav />
     </React.Fragment>
   );
 }

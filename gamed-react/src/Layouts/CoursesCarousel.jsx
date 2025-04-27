@@ -70,44 +70,46 @@ const CoursesCarousel = () => {
   const visibleCards = cardData.slice(currentIndex, currentIndex + cardsToShow);
 
   return (
-    <div id="available-course">
-      <div>
-        <h2 id="available-courses-heading">
-          Available <span id="courses-underline">Courses</span>
-        </h2>
-      </div>
-      <div>
-        <div id="carousel-wrapper">
-          <button
-            onClick={handlePrev}
-            id="prev-btn"
-            disabled={currentIndex === 0}
-          >
-            ←
-          </button>
-
-          <div id="carousel-container">
-            {visibleCards.map((item, index) => (
-              <CourseCard
-                key={index}
-                image={item.Image}
-                title={item.title}
-                description={item.description}
-                rating={item.rating}
-              />
-            ))}
+    <section className="snap-section">
+      <div id="available-course">
+        <div>
+          <h2 id="available-courses-heading">
+            Available <span id="courses-underline">Courses</span>
+          </h2>
+        </div>
+        <div>
+          <div id="carousel-wrapper">
+            <button
+              onClick={handlePrev}
+              id="prev-btn"
+              disabled={currentIndex === 0}
+            >
+              ←
+            </button>
+  
+            <div id="carousel-container">
+              {visibleCards.map((item, index) => (
+                <CourseCard
+                  key={index}
+                  image={item.Image}
+                  title={item.title}
+                  description={item.description}
+                  rating={item.rating}
+                />
+              ))}
+            </div>
+  
+            <button
+              onClick={handleNext}
+              id="next-btn"
+              disabled={currentIndex >= cardData.length - cardsToShow}
+            >
+              →
+            </button>
           </div>
-
-          <button
-            onClick={handleNext}
-            id="next-btn"
-            disabled={currentIndex >= cardData.length - cardsToShow}
-          >
-            →
-          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
