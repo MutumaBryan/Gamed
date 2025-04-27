@@ -3,10 +3,13 @@ import PasscodeInput from "../Component/Input/PasscodeInput";
 import VerifyButton from "../Component/Button/VerifyButton";
 import ResendCode from "../Component/Button/ResendCode";
 import "../Styles/ForgotPasswordForm.css";
+import { verifyPasscode } from "../API/Auth";
+import { resendVerificationCode } from "../API/Auth";
 
 const PasscodeVerificationForm = () => {
   const [passcode, setPasscode] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // to store the full passcode
   const handleComplete = (code) => {
@@ -15,27 +18,47 @@ const PasscodeVerificationForm = () => {
   };
 
   // to handle resend code
-  const handleResendCode = () => {
-    console.log("Resending verification code....");
-    alert("A new code has been sent to your email!"); // Show alert instead of displaying a message
+  const handleResendCode = async () => {
+    setLoading(true);
+    setMessage(""); // Clear previous messages
+    try {
+      const result = await resendVerificationCode();
+      setMessage("A new verification code has been sent to your email!");
+    } catch (err) {
+      setMessage("There was an error resending the code. Please try again.");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   // to handle verification
-  const handleVerify = () => {
+  const handleVerify = async () => {
     if (passcode.length === 5) {
-      console.log("Verifying Passcode:", passcode);
-      setMessage("Passcode verified successfully! ✅");
+      setLoading(true);
+      setMessage("");
+      try {
+        // Call the dummy API to simulate passcode verification
+        const result = await verifyPasscode(passcode);
+        setMessage("Passcode verified successfully! ✅");
+        console.log(result); // You can handle the result further if needed
+      } catch (err) {
+        setMessage("Invalid passcode. Please check and try again.");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
     } else {
-      setMessage("Invalid passcode. Please check and try again.");
+      setMessage("Please enter a valid passcode.");
     }
   };
   return (
     <>
-      <fieldset id="form-fieldset">
+      <fieldset id="forgotPassword-form-fieldset">
         <legend>Hey, your password reset is 80% set</legend>
         <h2>We sent a verification code to your email, enter it below</h2>
         <form id="password-layout-form">
-          <div className="password-form-container">
+          <div id="password-form-container">
             <PasscodeInput length={5} onComplete={handleComplete} />
             {message && <p className="message">{message}</p>}
             <div id="submit-button-wrapper">
@@ -43,7 +66,7 @@ const PasscodeVerificationForm = () => {
                 <ResendCode onResend={handleResendCode} />
               </div>
               <VerifyButton
-                isDisabled={passcode?.length !== 5}
+                isDisabled={passcode?.length !== 5 || loading}
                 onVerify={handleVerify}
               />
             </div>
