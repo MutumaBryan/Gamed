@@ -1,22 +1,24 @@
 import React from "react";
-// import LandingPage from "./Pages/LandingPage";
-// import CreateAccount from "./Pages/CreateAccount";
-// import LandingPage from "./Pages/LandingPage";
-// import LevelUp from "./Component/Card/LevelUp";
-// import CreateAccount from "./Pages/CreateAccount";
-// import ErrorPage from "./Pages/ErrorPage"
-// import PasswordVerification from "./Pages/PasswordVerification.jsx"
-// import SuccessPage from "./Pages/SuccessPage.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import LandingPage from "./Pages/LandingPage";
+import CreateAccount from "./Pages/CreateAccount";
+import PasswordVerification from "./Pages/PasswordVerification";
+import SuccessPage from "./Pages/SuccessPage";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   return (
-    <React.Fragment>
-      <LandingPage/>
-      {/* <CreateAccount/> */}
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/password-verification" element={<PasswordVerification />} />
+        <Route path="/success" element={<SuccessPage />} />
+        <Route path="/error" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
