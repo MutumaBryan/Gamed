@@ -3,9 +3,9 @@ import "./../../Styles/CheckoutButton.css";
 
 const LogIn = ({ onClick }) => {
   return (
-    <div className="container">
-      <div className="button-wrapper">
-        <button type="submit" onClick={onClick} className="checkout-button">
+    <div id="checkout-button-container">
+      <div id="button-wrapper">
+        <button type="submit" onClick={onClick} id="checkout-button">
           Log In
         </button>
       </div>

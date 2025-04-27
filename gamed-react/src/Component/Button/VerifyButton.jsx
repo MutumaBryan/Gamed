@@ -3,13 +3,9 @@ import "../../Styles/CheckoutButton.css";
 
 const VerifyButton = ({ isDisabled, onVerify }) => {
   return (
-    <div className="container">
-      <div className="button-wrapper">
-        <button
-          onClick={onVerify}
-          disabled={isDisabled}
-          className="checkout-button"
-        >
+    <div id="checkout-button-container">
+      <div id="button-wrapper">
+        <button onClick={onVerify} disabled={isDisabled} id="checkout-button">
           Verify
         </button>
       </div>

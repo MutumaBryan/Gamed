@@ -12,7 +12,8 @@ import React from "react";
 function App() {
   return (
     <React.Fragment>
-      <LandingPage/>
+     
+      {/* <LandingPage/> */}
       {/* <CreateAccount/> */}
     </React.Fragment>
   );

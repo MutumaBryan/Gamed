@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SampleImage from "../assets/images/CardImage.svg";
-import CourseCard from "../Component/Card/CourseCard";
+import LandingPageCourses from "../Component/Card/LandingPageCoursesCard";
+// import CourseCard from "../Component/Card/CourseCard";
 import "../Styles/CoursesCarousel.css";
 
 const cardData = [
@@ -88,7 +89,7 @@ const CoursesCarousel = () => {
 
           <div id="carousel-container">
             {visibleCards.map((item, index) => (
-              <CourseCard
+              <LandingPageCourses
                 key={index}
                 image={item.Image}
                 title={item.title}

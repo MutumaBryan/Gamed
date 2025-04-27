@@ -1,4 +1,4 @@
-.checkout-button-container {
+#checkout-button-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,12 +6,12 @@
   /* margin: 14px 0; */
 }
 
-.button-wrapper {
+#button-wrapper {
   width: 90%;
   max-width: 400px;
 }
 
-.checkout-button {
+#checkout-button {
   text-align: center;
   padding: 14px;
   width: 100%;
@@ -28,7 +28,7 @@
   display: block;
 }
 
-.checkout-button:hover {
+#checkout-button:hover {
   background-color: #74ff9e;
   color: #3c0099;
 }
