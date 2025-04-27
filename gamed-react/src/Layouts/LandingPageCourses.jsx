@@ -71,6 +71,7 @@ const CoursesCarousel = () => {
   const visibleCards = cardData.slice(currentIndex, currentIndex + cardsToShow);
 
   return (
+    <section className="snap-section">
     <div id="available-course">
       <div>
         <h2 id="available-courses-heading">
@@ -98,17 +99,10 @@ const CoursesCarousel = () => {
               />
             ))}
           </div>
-
-          <button
-            onClick={handleNext}
-            id="next-btn"
-            disabled={currentIndex >= cardData.length - cardsToShow}
-          >
-            →
-          </button>
         </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 };
 
