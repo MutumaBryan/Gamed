@@ -1,5 +1,10 @@
 import React from "react";
+import DashboardSideNav from "./Layouts/DashboardSideNav";
+import SocialLink from "./Layouts/SocialLink";
+import CoursesCarousel from "./Layouts/CoursesCarousel"
+import LandingFooter from "./Layouts/LandingFooter";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 import LandingPage from "./Pages/LandingPage";
 import CreateAccount from "./Pages/CreateAccount";
@@ -9,6 +14,7 @@ import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -18,6 +24,7 @@ function App() {
         <Route path="/error" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
+
   );
 }
 

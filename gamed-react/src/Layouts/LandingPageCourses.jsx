@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SampleImage from "../assets/images/CardImage.svg";
-import CourseCard from "../Component/Card/CourseCard";
+import LandingPageCourses from "../Component/Card/LandingPageCoursesCard";
+// import CourseCard from "../Component/Card/CourseCard";
 import "../Styles/CoursesCarousel.css";
 
 const cardData = [
@@ -70,6 +71,7 @@ const CoursesCarousel = () => {
   const visibleCards = cardData.slice(currentIndex, currentIndex + cardsToShow);
 
   return (
+    <section className="snap-section">
     <div id="available-course">
       <div>
         <h2 id="available-courses-heading">
@@ -88,7 +90,7 @@ const CoursesCarousel = () => {
 
           <div id="carousel-container">
             {visibleCards.map((item, index) => (
-              <CourseCard
+              <LandingPageCourses
                 key={index}
                 image={item.Image}
                 title={item.title}
@@ -97,17 +99,10 @@ const CoursesCarousel = () => {
               />
             ))}
           </div>
-
-          <button
-            onClick={handleNext}
-            id="next-btn"
-            disabled={currentIndex >= cardData.length - cardsToShow}
-          >
-            →
-          </button>
         </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 };
 
