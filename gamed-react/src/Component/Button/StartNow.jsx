@@ -1,10 +1,11 @@
 import React from 'react';
 import "../../Styles/StartNowButtonStyles.css"
+import { Link } from 'react-router-dom';
 
 function StartNow() {
   return (
     <React.Fragment>
-      <button id='start-now-button'>Start Now</button>
+      <Link to={'/create-account'}><button id='start-now-button'>Start Now</button></Link>
     </React.Fragment>
   )
 }

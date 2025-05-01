@@ -3,7 +3,6 @@ import "../Styles/LandingPage.css";
 import LandingTopSection from "../Layouts/LandingTopSection";
 import LandingSectionTwo from "../Layouts/LandingSectionTwo";
 import LandingFooter from "../Layouts/LandingFooter";
-import CoursesCarousel from "../Layouts/CoursesCarousel";
 import SocialLink from "../Layouts/SocialLink";
 
 function LandingPage() {
@@ -13,7 +12,7 @@ function LandingPage() {
         <LandingTopSection />
         <LandingSectionTwo />
         <SocialLink />
-        <CoursesCarousel />
+        {/* <CoursesCarousel /> */}
         <LandingFooter />
       </div>
     </React.Fragment>
