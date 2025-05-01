@@ -5,6 +5,7 @@ import "../Styles/LandingTopPageStyles.css";
 import illustration from "../assets/images/Hero section illustration.svg";
 import greenCheckIcon from "./../assets/images/tiny check icon green bgColor.svg"
 import purpleCheckIcon from "./../assets/images/tiny check icon purple bgColor.svg"
+import { Link } from 'react-router-dom';
 
 function LandingTopSection() {
   return (
@@ -19,7 +20,9 @@ function LandingTopSection() {
               Start your journey with engaging lessons, challenges, and rewards.
               and compete to be the best. Let’s make learning fun and rewarding!
             </p>
-            <GetStarted bgColor="#3C0099" color="#74FF9E" />
+            <Link to={"/create-account"}>
+              <GetStarted bgColor="#3C0099" color="#74FF9E" />
+            </Link>
             <p id="foot-signs">
               <img src={greenCheckIcon} alt="green check mark icon"></img>Experienced tutors{" "}
               <img src={purpleCheckIcon} alt="green check mark icon"></img><span style={{ color: "#4DAA69" }}>Experienced tutors</span>{" "}

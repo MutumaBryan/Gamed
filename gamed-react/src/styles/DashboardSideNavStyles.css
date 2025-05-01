@@ -1,4 +1,4 @@
-.side-nav {
+#dashboard-side-nav {
   height: 100vh; /* Full height of the viewport */
   width: 240px; /* Fixed width for the sidebar */
   background-color: #280066; /* Dark purple background */
@@ -73,3 +73,4 @@
 .side-nav ul li:nth-child(3)::before {
   background-image: url("../assets/images/DarkLeaderBoardIcon.svg")
 }
+

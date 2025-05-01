@@ -7,6 +7,7 @@ import fbLogo from "../assets/images/faecbookLogo.svg";
 import ig from "../assets/images/instagramLogo.svg";
 import twitter from "../assets/images/twitterFooterLogo.png";
 import "../Styles/LandingFooterStyles.css";
+import { Link } from "react-router-dom";
 
 function LandingFooter() {
   return (
@@ -28,7 +29,7 @@ function LandingFooter() {
       <section className="snap-section">
         <div id="footer-cta">
           <h2>Learn a skill on Gamed today, come join the fun!</h2>
-          <button>JOIN US TODAY</button>
+          <Link to={'/create-account'}><button>JOIN US TODAY</button></Link>
         </div>
 
         <div id="footer-background">
