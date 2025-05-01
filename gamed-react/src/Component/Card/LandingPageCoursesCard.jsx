@@ -1,9 +1,9 @@
 import React from "react";
 import CardRating from "../../Contexts/CardRating";
 import LearnMore from "../Button/LearnMore";
-import "../../Styles/CourseCard.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+ import "../../Styles/CourseCard.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const LandingPageCourses = ({ image, title, description, rating }) => {
   return (
