@@ -1,6 +1,6 @@
 export async function loginUser(username, password) {
     try {
-      const response = await fetch(' https://reqres.in/api/login', { 
+      const response = await fetch(' http://35.170.178.248/api/docs#/Auth/AuthController_login', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

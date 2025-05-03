@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/LeaderBoard.css';
+import '../Styles/LeaderBoard.css';
 import LeaderBoardBadge from "../assets/images/LeaderBoard_Badge.png";
 import LeaderBoardProfile from "../assets/images/LeaderBoard_Profile.png";
 import NotificationIcon from '../assets/images/Notification_Icon.png';
@@ -14,47 +14,14 @@ import TrophyIcon from "../assets/images/Trophy_Icon.png";
 import ProfileIcon from "../assets/images/Profile_Icon.png";
 import BookmarkIcon from "../assets/images/Bookmark_Icon.png";
 import SettingIcon from "../assets/images/Setting_Icon.png";
+import DashboardSideNav from "../Layouts/DashboardSideNav";
 
 
 const LeaderBoard = () => {
   return (
     <div className="leaderboard-container">
       {/* Sidebar */}
-      <aside className="sidebar">
-        <div className="logo">
-          <img src={LogoIcon} alt="Logo" className="sidebar-icon" />
-          GamEd
-        </div>
-        <div className="navbar">
-          <div className="nav-group">
-            <div className="nav-item">
-              <img src={DashboardIcon} alt="Dashboard" className="sidebar-icon" />
-              <span>Dashboard</span>
-            </div>
-            <div className="nav-item">
-              <img src={CourseIcon} alt="My Courses" className="sidebar-icon" />
-              <span>My Courses</span>
-            </div>
-            <div className="nav-item active">
-              <img src={TrophyIcon} alt="Leaderboard" className="sidebar-icon" />
-              <span>Leaderboard</span>
-            </div>
-            <div className="nav-item">
-              <img src={ProfileIcon} alt="My Profile" className="sidebar-icon" />
-              <span>My Profile</span>
-            </div>
-            <div className="nav-item">
-              <img src={BookmarkIcon} alt="Bookmarks" className="sidebar-icon" />
-              <span>Bookmarks</span>
-            </div>
-            <div className="nav-item settings-item">
-              <img src={SettingIcon} alt="Settings" className="sidebar-icon" />
-              <span>Settings</span>
-            </div>
-
-          </div>
-        </div>
-      </aside>
+      <DashboardSideNav />
       {/* Main Content */}
       <main className="leaderboard-main">
         {/* Header for images */}
