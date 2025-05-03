@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/DashboardSideNavStyles.css";
 import Logo from "../assets/images/Dashboard logo.svg";
+import { Link } from "react-router-dom";
 
 function DashboardSideNav() {
   const [activeItem, setActiveItem] = useState("Dashboard"); // Initialize active item
@@ -27,7 +28,7 @@ function DashboardSideNav() {
               className={activeItem === item ? "active" : ""}
               onClick={() => handleItemClick(item)}
             >
-              {item}
+              <Link to={item}>{item}</Link>
             </li>
           ))}
         </ul>

@@ -8,6 +8,9 @@ import LoginPage from './Pages/LoginPage'
 import PasswordVerification from './Pages/PasswordVerification';
 import SuccessPage from "./Pages/SuccessPage"
 import ErrorPage from './Pages/ErrorPage'
+import Dashboard from './Pages/Dashboard';
+import LeaderBoard from './Pages/LeaderBoard';
+import PageNotFound from './Pages/PageNotFound';
 
 
 
@@ -18,7 +21,9 @@ const router = createBrowserRouter([
   {path: "/password-verification", element: <PasswordVerification/>},
   {path: "/success", element: <SuccessPage />},
   {path: "/error", element: <ErrorPage />},
-  {path: "*", element: <ErrorPage />}
+  {path: "/Dashboard", element: <Dashboard />},
+  {path: "/LeaderBoard", element: <LeaderBoard />},
+  {path: "*", element: <PageNotFound />}
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
