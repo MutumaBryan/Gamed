@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import CreateAccount from './Pages/CreateAccount';
+import CreateAccount from './pages/CreateAccount';
 import LandingPage from './Pages/LandingPage';
 import LoginPage from './Pages/LoginPage'
 import PasswordVerification from './Pages/PasswordVerification';
