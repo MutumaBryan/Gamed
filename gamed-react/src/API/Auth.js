@@ -1,33 +1,60 @@
-export async function loginUser(username, password) {
-    try {
-      const response = await fetch(' http://35.170.178.248/api/docs#/Auth/AuthController_login', { 
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-          username: username,  // <-- sending username 
-          password: password
-        }),
-      });
-  
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Something went wrong");
-      }
-  
-      const data = await response.json();
-      return data; 
-    } catch (error) {
-      throw error;
-    }
-  }
-  
+// Auth.js - Updated
 
-  // Passcode Verification API 
+// LOGIN USER
+export async function loginUser(email, password) {
+  try {
+    const response = await fetch('https://use-gamed.ddns.net/api/v1/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Login failed");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// REGISTER USER
+export async function registerUser(email, password, username) {
+  try {
+    const response = await fetch('https://use-gamed.ddns.net/api/v1/auth/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password, username }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Registration failed");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+// LOGOUT USER
+export function logoutUser() {
+  localStorage.removeItem("token"); // Replace "token" with your actual key if different
+}
+
+
+// VERIFY PASSCODE (placeholder - update when you have a real API)
 export async function verifyPasscode(passcode) {
   try {
-    const response = await fetch('https://reqres.in/api/verify-passcode', { // Placeholder API link
+    const response = await fetch('https://reqres.in/api/verify-passcode', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,23 +68,21 @@ export async function verifyPasscode(passcode) {
     }
 
     const data = await response.json();
-    return data; // This will be the success response you can handle
+    return data;
   } catch (error) {
     throw error;
   }
 }
 
-// API to handle resend code 
-// Inside your API/Auth.js file
-export async function resendVerificationCode() {
+// RESEND VERIFICATION CODE (update URL with real backend if available)
+export async function resendVerificationCode(email) {
   try {
-    const response = await fetch("https://your-backend-url/api/resend-verification-code", { // Replace with your API endpoint
+    const response = await fetch("https://use-gamed.ddns.net/api/v1/auth/resend-verification-code", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      // You can send additional information like user ID or email if required
-      body: JSON.stringify({ /* email or user ID */ }),
+      body: JSON.stringify({ email }),
     });
 
     if (!response.ok) {
@@ -66,17 +91,16 @@ export async function resendVerificationCode() {
     }
 
     const data = await response.json();
-    return data; // This will be the success response
+    return data;
   } catch (error) {
     throw error;
   }
 }
 
-
-// API to handle forgot password
+// FORGOT PASSWORD (update URL if route is different)
 export const sendForgotPasswordRequest = async (email) => {
   try {
-    const response = await fetch('http://localhost:3000/api/forgot-password', { // Replace with your actual backend URL
+    const response = await fetch('https://use-gamed.ddns.net/api/v1/auth/forgot-password', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -90,8 +114,9 @@ export const sendForgotPasswordRequest = async (email) => {
     }
 
     const data = await response.json();
-    return data.message; // Return success message from the API response
+    return data.message;
   } catch (error) {
-    throw new Error(error.message); // Handle errors, including network errors
+    throw new Error(error.message);
   }
 };
+

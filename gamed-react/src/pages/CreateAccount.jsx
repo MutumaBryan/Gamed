@@ -34,17 +34,17 @@ function RemoveAside() {
     </aside>
   );
 }
+
 function CreateAccount() {
   return (
-    <React.Fragment>
-      <div className="create-accountBody-wrapper">
-        <RemoveAside />
-        <main id="create-accountPage-main">
-          <CreateAccountForm />
-        </main>
-      </div>
-    </React.Fragment>
+    <div className="create-accountBody-wrapper">
+      <RemoveAside />
+      <main id="create-accountPage-main">
+        <CreateAccountForm />
+      </main>
+    </div>
   );
 }
 
 export default CreateAccount;
+

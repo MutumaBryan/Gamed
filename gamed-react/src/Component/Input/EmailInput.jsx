@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "../../Styles/FormInputStyles.css";
 
-const EmailInput = () => {
-  const [email, setEmail] = useState("");
-  const isLabelActive = email.length > 0;
+const EmailInput = ({ value, onChange }) => {
+  const [isFocused, setIsFocused] = useState(false);
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+  const isLabelActive = isFocused || value.length > 0;
+
   return (
-    <div className={"flex-floating-label"}>
+    <div className="flex-floating-label">
       <label htmlFor="email" className={isLabelActive ? "active" : ""}>
         Email Address
       </label>
@@ -18,8 +16,10 @@ const EmailInput = () => {
         type="email"
         name="email"
         placeholder="Enter your email address"
-        value={email}
-        onChange={handleEmailChange}
+        value={value}
+        onChange={onChange}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
         required
       />
     </div>
@@ -27,3 +27,4 @@ const EmailInput = () => {
 };
 
 export default EmailInput;
+
