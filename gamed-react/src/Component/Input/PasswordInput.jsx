@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../Styles/FormInputStyles.css";
 
-function PasswordInput() {
+function PasswordInput({ label, value, onChange, id, placeholder, required }) {
   // We use the useState Hook to create a state variable isFocused that tracks whether the input is currently focused. It's initialized to false
   const [isFocused, setIsFocused] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -17,16 +17,17 @@ function PasswordInput() {
   return (
     <div className={"flex-floating-label"}>
       <label htmlFor="password" className={isLabelActive ? "active" : ""}>
-        Password
+        {label}
       </label>
       <input
-        id="password"
         onFocus={handleFocus}
         onBlur={handleBlur}
+        id={id}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        required={required}
         type="password"
-        name="password"
-        placeholder="input your password"
-        required
       ></input>
     </div>
   );

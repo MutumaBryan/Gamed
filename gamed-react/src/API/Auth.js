@@ -76,7 +76,7 @@ export async function resendVerificationCode() {
 // API to handle forgot password
 export const sendForgotPasswordRequest = async (email) => {
   try {
-    const response = await fetch('http://localhost:3000/api/forgot-password', { // Replace with your actual backend URL
+    const response = await fetch('http://localhost:3000/api/forgot-password', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

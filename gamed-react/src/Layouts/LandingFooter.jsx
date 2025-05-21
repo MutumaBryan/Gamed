@@ -8,20 +8,25 @@ import ig from "../assets/images/instagramLogo.svg";
 import twitter from "../assets/images/twitterFooterLogo.png";
 import "../Styles/LandingFooterStyles.css";
 import { Link } from "react-router-dom";
+import dummy from '../assets/images/dummy-profile-picture.svg'
 
 function LandingFooter() {
   return (
     <React.Fragment>
-      <section className="snap-section" >
+      <section className="snap-section">
         <header id="landing-footer-header">
           What Other Players are Saying
         </header>
 
-        <div id='footer-comment-card-container'>
+        <div id="footer-comment-card-container">
           <article id="footer-comment-card">
-            <img src={{}} alt="Commenter's profile"></img>
-            <header id="footer-comment-card-title">Lorem Ipsum</header>
-            <p id="footer-comment-card-content">Lorem ipsum dolor sit amet, quod eirmod tritani at has, ipsum maluisset usu an. At vel noster mediocritatem. Eam id aliquip quaestio petentium, paulo libris ius ne, cu offendit adversarium cum.</p>
+            <img src={dummy} alt="Commenter's profile"></img>
+            <header id="footer-comment-card-title">Eva Jacobs</header>
+            <p id="footer-comment-card-content">
+              Learning feels like an adventure. The challenges, rewards, and
+              interactive lessons keep me hooked. Best way to level up my
+              skills!.
+            </p>
           </article>
         </div>
       </section>
@@ -29,7 +34,9 @@ function LandingFooter() {
       <section className="snap-section">
         <div id="footer-cta">
           <h2>Learn a skill on Gamed today, come join the fun!</h2>
-          <Link to={'/create-account'}><button>JOIN US TODAY</button></Link>
+          <Link to={"/create-account"}>
+            <button>JOIN US TODAY</button>
+          </Link>
         </div>
 
         <div id="footer-background">
