@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import DashboardSideNav from "../Layouts/DashboardSideNav";
 import DashboardLatestCourse from "../Layouts/DashboardLatestCourse";
 import "../Styles/DashboardPageStyles.css";
@@ -7,8 +8,11 @@ import CourseCards from "../Component/Card/CourseCards";
 import { BrowserRouter as useLocation } from 'react-router-dom';
 
 function Dashboard() {
-  // const location = useLocation(); 
-  // const username = location.state?.username;
+  const navigate = useNavigate();
+
+  const handleTrackSelection = () => {
+    navigate("/track-selection");
+  };
 
   return (
     <React.Fragment>
@@ -20,6 +24,23 @@ function Dashboard() {
           <DashboardTopNav />
           <DashboardLatestCourse />
           <CourseCards />
+
+          <div style={{ marginTop: "20px", textAlign: "center" }}>
+            <button
+              style={{
+                padding: "10px 20px",
+                fontSize: "16px",
+                backgroundColor: "#6200ee",
+                color: "white",
+                border: "none",
+                borderRadius: "8px",
+                cursor: "pointer"
+              }}
+              onClick={handleTrackSelection}
+            >
+              Select Track
+            </button>
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -27,3 +48,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+

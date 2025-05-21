@@ -1,100 +1,91 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // For navigation
+import { useAuth } from "../contexts/AuthContext"; // AuthContext if needed later
 import SignUpGoogle from "../Component/Button/SignUpGoogle";
 import CreateAccountButton from "../Component/Button/CreateAccountButton";
 import UsernameInput from "../Component/Input/UsernameInput";
 import PasswordInput from "../Component/Input/PasswordInput";
+import EmailInput from "../Component/Input/EmailInput";
 import "../Styles/CreateAccountForm.css";
-import { Link, useNavigate } from "react-router-dom";
+import { registerUser } from "../API/Auth";
 
-function CreateAccountForm() {
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+const CreateAccountForm = () => {
+  const navigate = useNavigate(); // Navigation hook
+  const [successMessage, setSuccessMessage] = useState("");
+  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
-  const [message, setMessage] = useState("");
-  const navigate = useNavigate();
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission
-    const email = 'mutuma@gmai.com';
-    if (password === confirmPassword) {
-      setMessage("Passwords match! Proceeding...");
-      const data = { email, username, password };
-      fetch("http://35.170.178.248/api/docs#/Auth/AuthController_register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((responseData) => {
-          console.log("Success:", responseData);
-          setMessage("Password successfully sent, redirecting...");
-          // Redirect to dashboard after successful submission
-          navigate("/Dashboard", { state: { username: username } }); 
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          setMessage("Username is already in use, try again");
-        });
-    } else {
-      setMessage("Passwords do not match. Please try again.");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    setSuccessMessage("");
+
+    try {
+      // 👇 Corrected the order of arguments
+      const result = await registerUser(email, password, username);
+      if (result?.error) {
+        setError(result.error);
+      } else {
+        setSuccessMessage("🎉 Account created successfully! Redirecting to login...");
+        setTimeout(() => {
+         navigate("/login"); // Go to login page
+        }, 2000); // Wait 2 seconds before redirecting
+      }
+    } catch (err) {
+      console.error(err);
+      setError("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
-  const styles = { 
-    message: {
-        marginRight: '45px',
-        fontSize: '16px',
-        color: 'red',
-        textAlign: 'center',
-    }
-  }
+
   return (
     <React.Fragment>
       <fieldset id="create-account-fieldset">
         <legend>Create Account</legend>
         <form id="create-account-form" onSubmit={handleSubmit}>
+          <EmailInput
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
           <UsernameInput
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <PasswordInput
-            label="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            id="password"
-            placeholder="Enter your password"
-            required={true}
           />
-          <PasswordInput
-            label="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            id="confirmPassword"
-            placeholder="Confirm your password"
-            required={true}
-          />
-          <p style={styles.message}>{message}</p>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
           <div id="create-acc-button-wrapper">
-            <CreateAccountButton />
+            <CreateAccountButton loading={loading} />
             <p id="redirect-to-log-in">
-              Have an account? <Link to={'/login'}><span>Login</span></Link>
+              Have an account?{" "}
+              <span
+                onClick={() => navigate("/login")}
+                style={{ cursor: "pointer", color: "#007BFF" }}
+              >
+                Login
+              </span>
             </p>
           </div>
           <div id="or-wrapper">
-            <hr></hr>
+            <hr />
             <p>or</p>
+            <hr />
           </div>
           <SignUpGoogle />
         </form>
       </fieldset>
     </React.Fragment>
   );
-}
+};
 
 export default CreateAccountForm;
+

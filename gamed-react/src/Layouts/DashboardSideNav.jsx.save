@@ -10,7 +10,6 @@ function DashboardSideNav() {
     { name: "Dashboard", path: "/dashboard" },
     { name: "Course Page", path: "/course-page" },
     { name: "LeaderBoard", path: "/leaderboard" },
-    { name: "TrackSelection", path: "/track-selection" },
   ];
 
   const handleItemClick = (item) => {
